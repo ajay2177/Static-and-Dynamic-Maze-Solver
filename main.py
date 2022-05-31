@@ -17,7 +17,7 @@ for i in range(0, 201):
 print("Maze_env", maze_env)
 start = (1,1)
 exit = (maze_size[0]-2,maze_size[1]-2)
-game = Static_Maze(maze=new_maze, start_cell= start, exit_cell = exit)
+game = Static_Maze(maze=maze_env, start_cell= start, exit_cell = exit)
 # game = Dynamic_Maze(maze_size=maze_size, start_cell= start, exit_cell = exit)
 model = QTableModel(game, start_cell=start)
 h, w, _ = model.train(discount=0.90, exploration_rate=0.2, exploration_decay = 0.995, learning_rate=0.10, episodes=2000, max_steps=50000)
